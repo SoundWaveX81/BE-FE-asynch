@@ -1,0 +1,14 @@
+
+/.idea/
+/venv/
+/.venv/
+/.vscode/
+/vars/
+.env
+/db_dumps/
+.mypy_cache/
+script.*.sh
+*.sqlite
+envvars
+*.icloud
+*.DS_Store

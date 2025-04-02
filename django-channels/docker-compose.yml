@@ -1,0 +1,27 @@
+services:
+  web:
+    build: .
+    container_name: django-channels_web
+    command: daphne -b 0.0.0.0 -p 8000 myproject.asgi:application
+    volumes:
+      - ./myproject:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+
+  celery:
+    build: .
+    container_name: django-channels_celery
+    command: celery -A myproject worker --loglevel=info
+    volumes:
+      - ./myproject:/app
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:6.2
+    container_name: django-channels_redis
+    ports:
+      - "6379:6379"
+

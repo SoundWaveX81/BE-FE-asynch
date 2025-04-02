@@ -1,0 +1,15 @@
+<div>
+  <label for="userId">User ID:</label>
+  <input id="userId" [(ngModel)]="userId" type="text" placeholder="Ingrese su ID" />
+  <button (click)="startTask()">Iniciar Tarea</button>
+</div>
+
+<div style="background-color: lightgray; padding: 10px; margin-top: 10px;">
+  <h3>Respuesta HTTP</h3>
+  <pre>{{ httpResult | json }}</pre>
+</div>
+
+<div style="background-color: lightyellow; padding: 10px; margin-top: 10px;">
+  <h3>Notificaciones WebSocket</h3>
+  <pre>{{ wsResult | json }}</pre>
+</div>
