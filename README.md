@@ -15,7 +15,7 @@ $ docker compose up
 ### 🛸 To run the Frontend, `cd` into the project's folder and run:
 
 ``` shell
-$ ng run dev
+$ ng serve 
 ```
 
 *Frontend will start listening on port `4200`* :ear:
